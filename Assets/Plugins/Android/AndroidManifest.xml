@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.questardev.jptranslator"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <!-- Meta Quest 3 Requirements -->
+    <uses-feature android:name="android.hardware.vr.headtracking" android:required="true" />
+    <uses-feature android:name="oculus.software.handtracking" android:required="false" />
+
+    <!-- Camera and AR Permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.oculus.permission.USE_SCENE" />
+    <uses-permission android:name="oculus.permission.handtracking" />
+
+    <!-- Internet for Translation API -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Storage for caching -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@mipmap/app_icon"
+        android:isGame="true"
+        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+
+        <meta-data android:name="com.oculus.supportedDevices" android:value="quest3|questpro" />
+        <meta-data android:name="com.oculus.intent.category.VR" android:value="vr_only" />
+        <meta-data android:name="com.oculus.vr.focusaware" android:value="true" />
+
+        <!-- Enable passthrough -->
+        <meta-data android:name="com.oculus.ossplash" android:value="true" />
+
+        <activity
+            android:name="com.unity3d.player.UnityPlayerActivity"
+            android:exported="true"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="com.oculus.intent.category.VR" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

@@ -1,0 +1,18 @@
+{
+    "name": "Quest3ARTranslator",
+    "rootNamespace": "Quest3ARTranslator",
+    "references": [
+        "Unity.XR.Management",
+        "Unity.XR.OpenXR",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
