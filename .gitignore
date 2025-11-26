@@ -70,3 +70,4 @@ crashlytics-build.properties
 **/APIKeys.txt
 **/secrets.json
 **/.env
+PicoGamepadConverter/
