@@ -71,3 +71,4 @@ crashlytics-build.properties
 **/secrets.json
 **/.env
 PicoGamepadConverter/
+usb-ss3d-gamepad/
